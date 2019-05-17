@@ -114,6 +114,9 @@ public class FeatureManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        SetInteractionState(true);
+        SetMoveActive(true);
+        SetRotationActive(true);
     }
 
     public void SetInteractionState(bool state)

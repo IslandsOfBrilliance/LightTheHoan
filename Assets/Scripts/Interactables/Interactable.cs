@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Interactable : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Interactable : MonoBehaviour
 
     Vector3 initialPosition;
     Transform parent;
+    public UnityEvent interactionEvent;
 
     protected virtual void Start()
     {
@@ -22,6 +24,7 @@ public class Interactable : MonoBehaviour
     public virtual void OnSelected()
     {
         Selected = true;
+        interactionEvent?.Invoke();
     }
 
     public virtual void OnDeselected()

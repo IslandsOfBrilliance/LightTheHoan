@@ -23,5 +23,6 @@ public class PlayerInput : MonoBehaviour
         Look = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
         MoveRaw = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);
         LookRaw = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);
+        print("Input: " + LeftGrab + " " + RightGrab);
     }
 }
