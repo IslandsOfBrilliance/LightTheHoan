@@ -30,7 +30,7 @@ public class FreeGrab : MonoBehaviour
         transform.localRotation = InputTracking.GetLocalRotation(device);
 
         if (!IsActive) return;
-      
+        print("isActive");
             if (DistanceGrab)
                 DistGrab();
             else
@@ -86,6 +86,7 @@ public class FreeGrab : MonoBehaviour
     void DistGrab()
     {
         if (itemInHand) return;
+
         RaycastHit hit;
         Ray ray = new Ray(raycastPosition.position, raycastPosition.forward);
 
@@ -101,6 +102,7 @@ public class FreeGrab : MonoBehaviour
                 {
                     if (!grabbing)
                     {
+
                         grabbing = true;
                         StartCoroutine(MoveTo(hit));
                     }

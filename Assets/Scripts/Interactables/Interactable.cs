@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     public Transform grabPoint;
     public bool Selected { get; protected set; }
     public bool IsInteractable { get; protected set; }
+    public bool resetsOnDeselected;
 
     Vector3 initialPosition;
     Transform parent;
@@ -23,6 +24,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void OnSelected()
     {
+        print("Selected");
         Selected = true;
         interactionEvent?.Invoke();
     }
@@ -34,7 +36,8 @@ public class Interactable : MonoBehaviour
         if (grabbable)
         {
             transform.parent = parent;
-            transform.localPosition = initialPosition;
+            if(resetsOnDeselected)
+                transform.localPosition = initialPosition;
         }
     }
 

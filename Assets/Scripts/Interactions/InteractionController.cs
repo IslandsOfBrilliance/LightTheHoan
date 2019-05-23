@@ -16,7 +16,6 @@ public class InteractionController : MonoBehaviour
     Animator handAnimator;
     Interactable interactable;
 
-    [HideInInspector]
     public List<string> interactionTags = new List<string>();
 
     private void OnEnable()
@@ -34,13 +33,15 @@ public class InteractionController : MonoBehaviour
         Ray ray = new Ray(raycastPosition.position, raycastPosition.forward);
         if(Physics.SphereCast(ray, pointRadius, out hit, Mathf.Infinity, interactionLayer))
         {
+            
             if(interactionTags.Contains(hit.transform.tag))
             {
+               
                 Interactable interactionState = hit.transform.GetComponent<Interactable>();
 
                 if (interactionState && !interactionState.IsInteractable)
                     return;
-
+                
                 line.SetPosition(0, ray.origin);
                 line.SetPosition(1, hit.point);
                 line.enabled = true;
@@ -49,11 +50,12 @@ public class InteractionController : MonoBehaviour
 
                 if (device == XRNode.LeftHand ? PlayerInput.LeftGrab : PlayerInput.RightGrab)
                 {
+                    print(hit.transform.name);
                     if (interactable)
                         interactable.OnDeselected();
 
                     interactable = hit.transform.GetComponent<Interactable>();
-
+                    print(interactable.name);
                     if (interactable)
                         interactable.OnSelected();
 
