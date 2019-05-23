@@ -6,7 +6,8 @@ public enum ColorPalette
 {
     Red,
     Green,
-    Blue
+    Blue,
+    Black
 }
 
 public class ColorManager : MonoBehaviour

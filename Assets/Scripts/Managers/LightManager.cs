@@ -15,7 +15,8 @@ public class LightManager : MonoBehaviour
 
     public void ChangeLightEffect(LightEffect effect)
     {
+        currentEffect.StopEffect();
         currentEffect = effect;
-        StartCoroutine(currentEffect.ActivateEffect(lights));
+        currentEffect.StartEffect(lights);
     }
 }

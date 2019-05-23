@@ -507,6 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 1
   grabPoint: {fileID: 72317618}
+  resetsOnDeselected: 0
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -873,10 +874,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 293393154}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ced02ad08065ca498379472cdb6f796, type: 3}
+  m_Script: {fileID: 11500000, guid: ba92ae512cd294744a6085805ca620b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightColor: 1
+  lightColor: 0
+  blinkRate: 0.25
 --- !u!4 &293393156
 Transform:
   m_ObjectHideFlags: 0
@@ -1801,7 +1803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 912306417}
   - component: {fileID: 912306416}
-  - component: {fileID: 912306420}
+  - component: {fileID: 912306419}
   - component: {fileID: 912306418}
   m_Layer: 8
   m_Name: Blue Firefly
@@ -1824,6 +1826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 1
   grabPoint: {fileID: 912306417}
+  resetsOnDeselected: 0
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1831,7 +1834,7 @@ MonoBehaviour:
         m_MethodName: ChangeLightEffect
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 912306420}
+          m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: LightEffect, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1868,7 +1871,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.125
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &912306420
+--- !u!114 &912306419
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1877,10 +1880,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 912306415}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ced02ad08065ca498379472cdb6f796, type: 3}
+  m_Script: {fileID: 11500000, guid: ba92ae512cd294744a6085805ca620b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lightColor: 2
+  blinkRate: 0.25
 --- !u!4 &983227059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 4620f3c93dca8c94c9124d8ba443f43e,
@@ -2165,6 +2169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grabbable: 1
   grabPoint: {fileID: 1234366952}
+  resetsOnDeselected: 0
   interactionEvent:
     m_PersistentCalls:
       m_Calls:
@@ -2342,6 +2347,10 @@ MonoBehaviour:
     lightColor: {r: 0, g: 0.016898155, b: 1, a: 1}
     emissiveColor: {r: 0, g: 0.046749115, b: 1, a: 1}
     brightness: 1
+  - color: 3
+    lightColor: {r: 0, g: 0, b: 0, a: 1}
+    emissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    brightness: 0
 --- !u!114 &1412661160
 MonoBehaviour:
   m_ObjectHideFlags: 0

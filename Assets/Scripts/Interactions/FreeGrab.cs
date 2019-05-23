@@ -30,15 +30,14 @@ public class FreeGrab : MonoBehaviour
         transform.localRotation = InputTracking.GetLocalRotation(device);
 
         if (!IsActive) return;
-        print("isActive");
-            if (DistanceGrab)
-                DistGrab();
-            else
-                Grab();
+        if (DistanceGrab)
+            DistGrab();
+        else
+            Grab();
 
         if (device == XRNode.LeftHand ? !PlayerInput.LeftGrab : !PlayerInput.RightGrab)
         {
-            if(itemInHand)
+            if (itemInHand)
             {
                 itemInHand.transform.parent = null;
                 Interactable interactable = itemInHand.GetComponent<Interactable>();
