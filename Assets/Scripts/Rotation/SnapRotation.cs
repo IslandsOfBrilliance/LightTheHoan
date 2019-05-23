@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SnapRotation : MonoBehaviour
 {
+    [HideInInspector]
     public float rotationDegree = 70f;
+    [HideInInspector]
     public float rotationFrequency = .5f;
 
     public bool IsActive { get; set; }

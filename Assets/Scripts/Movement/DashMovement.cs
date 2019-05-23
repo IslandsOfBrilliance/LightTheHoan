@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class DashMovement : MonoBehaviour
 {
+    [HideInInspector]
     public float speed = 2f;
+    [HideInInspector]
     public float stoppingDistance = .1f;
-
+    [HideInInspector]
     public float distance = 2f;
     public LayerMask environmentLayer;
 

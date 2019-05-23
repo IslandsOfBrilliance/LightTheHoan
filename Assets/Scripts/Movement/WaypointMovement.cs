@@ -7,7 +7,9 @@ public class WaypointMovement : MonoBehaviour
 {
     public bool IsActive { get; set; }
 
+    [HideInInspector]
     public float movementSpeed = 10;
+    [HideInInspector]
     public float rotationSpeed = 200;
 
     public Transform lhRaycastPosition;

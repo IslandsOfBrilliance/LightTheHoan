@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SmoothRotation : MonoBehaviour
 {
+    [HideInInspector]
     public float rotationSpeed = 100;
     public bool IsActive { get; set; }
 

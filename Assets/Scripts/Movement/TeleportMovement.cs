@@ -8,9 +8,11 @@ public class TeleportMovement : MonoBehaviour
     public bool IsActive { get; set; }
     public bool WithRotation { get; set; }
 
+    [HideInInspector]
     public float movementSpeed;
+    [HideInInspector]
     public float moveDistance;
-
+    [HideInInspector]
     public float rotationSpeed = 200f;
 
     public GameObject teleportPointer;

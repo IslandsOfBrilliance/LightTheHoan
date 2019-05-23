@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SmoothMovement : MonoBehaviour
 {
+    [HideInInspector]
     public float speed = 5;
 
     public bool IsActive { get; set; }
