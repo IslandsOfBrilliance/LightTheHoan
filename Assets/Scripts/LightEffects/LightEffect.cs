@@ -7,6 +7,16 @@ public class LightEffect : MonoBehaviour
     [SerializeField] protected ColorPalette lightColor;
     protected Coroutine runningEffect;
 
+    public bool displayEffectOnInteractable;
+    [ConditionalHide("displayEffectOnInteractable", true)]
+    public List<MeshRenderer> interactableMeshRenderers;
+
+    private void Start()
+    {
+        if(displayEffectOnInteractable)
+            StartCoroutine(ActivateEffect(interactableMeshRenderers));
+    }
+
     public virtual void StartEffect(List<MeshRenderer> lights)
     {
         runningEffect = StartCoroutine(ActivateEffect(lights));
