@@ -190,7 +190,7 @@ namespace Gaia.GX.Dogmatic
                 aquasObj.transform.localScale = sceneInfo.m_sceneBounds.extents/5;
                 DestroyImmediate(aquasObj.GetComponent<MeshCollider>());
                 aquasObj.GetComponent<MeshRenderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-                aquasObj.GetComponent<Renderer>().material = (Material)AssetDatabase.LoadAssetAtPath("Assets/AQUAS/Materials/Water/Desktop&Web/River.mat", typeof(Material));
+                aquasObj.GetComponent<Renderer>().material = (Material)AssetDatabase.LoadAssetAtPath("Assets/Asset Packages/AQUAS/Materials/Water/Desktop&Web/River.mat", typeof(Material));
                 aquasObj.AddComponent<AQUAS_Reflection>();
                 aquasObj.AddComponent<AQUAS_RenderQueueEditor>();
 
@@ -283,7 +283,7 @@ namespace Gaia.GX.Dogmatic
 
             //Cache the material from the river plane and set the material with the reference texture on it
             Material cachedMaterial = GameObject.Find("AQUAS Waterplane").GetComponent<UnityEngine.Renderer>().sharedMaterial;
-            Material referenceTexMat = (Material)AssetDatabase.LoadAssetAtPath("Assets/AQUAS/Materials/RiverRef.mat", typeof(Material));
+            Material referenceTexMat = (Material)AssetDatabase.LoadAssetAtPath("Assets/Asset Packages/AQUAS/Materials/RiverRef.mat", typeof(Material));
             GameObject.Find("AQUAS Waterplane").GetComponent<UnityEngine.Renderer>().sharedMaterial = referenceTexMat;
 #endregion
 
@@ -369,8 +369,8 @@ namespace Gaia.GX.Dogmatic
                 camera.farClipPlane = sceneInfo.m_sceneBounds.extents.x * 2;
 
 #if UNITY_POST_PROCESSING_STACK_V2 && AQUAS_PRESENT
-                underwaterObj.GetComponent<AQUAS_LensEffects>().underWaterParameters.underwaterProfile = (PostProcessProfile)AssetDatabase.LoadAssetAtPath("Assets/AQUAS/Post Processing/AQUAS_Underwater_v2.asset", typeof(PostProcessProfile));
-                underwaterObj.GetComponent<AQUAS_LensEffects>().underWaterParameters.defaultProfile = (PostProcessProfile)AssetDatabase.LoadAssetAtPath("Assets/AQUAS/Post Processing/DefaultPostProcessing_v2.asset", typeof(PostProcessProfile));
+                underwaterObj.GetComponent<AQUAS_LensEffects>().underWaterParameters.underwaterProfile = (PostProcessProfile)AssetDatabase.LoadAssetAtPath("Assets/Asset Packages/AQUAS/Post Processing/AQUAS_Underwater_v2.asset", typeof(PostProcessProfile));
+                underwaterObj.GetComponent<AQUAS_LensEffects>().underWaterParameters.defaultProfile = (PostProcessProfile)AssetDatabase.LoadAssetAtPath("Assets/Asset Packages/AQUAS/Post Processing/DefaultPostProcessing_v2.asset", typeof(PostProcessProfile));
 #endif
 
                 //Underwater effects setup
