@@ -124,8 +124,9 @@ Shader "OvrAvatar/AvatarSurfaceShader" {
 			#pragma multi_compile ROUGHNESS_OFF ROUGHNESS_ON
 			#pragma multi_compile VERTALPHA_OFF VERTALPHA_ON
 			#pragma multi_compile LAYERS_1 LAYERS_2 LAYERS_3 LAYERS_4 LAYERS_5 LAYERS_6 LAYERS_7 LAYERS_8
+			#pragma exclude_renderers gles3 metal d3d11_9x xbox360 xboxone ps3 ps4 psp2
 
-			#include "Assets/Oculus/Avatar/Resources/Materials/AvatarMaterialStateShader.cginc"
+			#include "Assets/Asset Packages/Oculus/Avatar/Resources/Materials/AvatarMaterialStateShader.cginc"
 
 			float4 frag(VertexOutput IN) : COLOR
 			{

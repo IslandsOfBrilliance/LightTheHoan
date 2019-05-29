@@ -47,6 +47,8 @@ Shader "OvrAvatar/AvatarSurfaceShaderPBS" {
 // Physically based Standard lighting model, and enable shadows on all light types
 #pragma surface surf Standard vertex:vert nolightmap alpha noforwardadd
 
+			#pragma exclude_renderers gles3 metal d3d11_9x xbox360 xboxone ps3 ps4 psp2
+
 float _Alpha;
 sampler2D _Albedo;
 float4 _Albedo_ST;
