@@ -50,14 +50,15 @@ public class InteractionController : MonoBehaviour
 
                 if (device == XRNode.LeftHand ? PlayerInput.LeftGrab : PlayerInput.RightGrab)
                 {
-                    print(hit.transform.name);
                     if (interactable)
                         interactable.OnDeselected();
 
                     interactable = hit.transform.GetComponent<Interactable>();
-                    print(interactable.name);
+
                     if (interactable)
                         interactable.OnSelected();
+
+                    line.enabled = false;
 
                     if (FeatureManager.Instance.moveType == FeatureManager.MoveType.Waypoint && hit.transform.tag.Equals("Waypoint"))
                         FeatureManager.Instance.waypointMovement.Move(hit);

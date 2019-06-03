@@ -124,6 +124,7 @@ public class FreeGrab : MonoBehaviour
 
         if (interactable)
         {
+            line.enabled = false;
             itemInHand.transform.localRotation = interactable.grabPoint.localRotation;
             itemInHand.transform.position = handPoint.position - (interactable.grabPoint.position - itemInHand.transform.position);
             interactable.OnSelected();

@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 38a68f55943b5274d9269966a0a631ff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -106,7 +106,7 @@ Material:
     - _Glossiness: 0.5
     - _LargeWaveRefraction: 1.53
     - _LargeWavesSpeed: 50
-    - _LargeWavesTiling: 1
+    - _LargeWavesTiling: 2
     - _LightWrapping: 2
     - _LongTilingDistance: 1500
     - _MediumTilingDistance: 500
@@ -115,10 +115,10 @@ Material:
     - _MediumWavesTiling: 4
     - _Metallic: 0
     - _Mode: 0
-    - _NormalTiling: 1
+    - _NormalTiling: 5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ReflectionIntensity: 0.436
+    - _ReflectionIntensity: 1
     - _Refraction: 0.67
     - _RefractionDistance: 10
     - _RefractionFalloff: 1

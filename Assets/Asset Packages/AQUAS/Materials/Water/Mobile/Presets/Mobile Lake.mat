@@ -83,10 +83,10 @@ Material:
     - _FoamVisibility: 0.227
     - _Gloss: 0.8
     - _Glossiness: 0.5
-    - _LightWrapping: 2
+    - _LightWrapping: 6
     - _Metallic: 0
     - _Mode: 0
-    - _NormalTiling: 5
+    - _NormalTiling: 150000
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Reflectionintensity: 0.387
