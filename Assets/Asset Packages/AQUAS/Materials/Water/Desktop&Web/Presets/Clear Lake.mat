@@ -86,7 +86,7 @@ Material:
     - _DepthTransparency: 10
     - _DetailNormalMapScale: 1
     - _DistanceTilingFade: 1
-    - _Distortion: 0.15
+    - _Distortion: 0.02
     - _DstBlend: 0
     - _EnableCustomFog: 0
     - _EnableReflections: 1
