@@ -204,7 +204,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 104
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -245,6 +245,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 485336335}
+  - component: {fileID: 485336336}
   m_Layer: 0
   m_Name: RightHand
   m_TagString: Untagged
@@ -266,6 +267,19 @@ Transform:
   m_Father: {fileID: 241679148}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &485336336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485336334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5330a5eb8156b604b96274c32e757a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  device: 5
 --- !u!1 &1253274732
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,6 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2124290759}
+  - component: {fileID: 2124290760}
   m_Layer: 0
   m_Name: LeftHand
   m_TagString: Untagged
@@ -387,3 +402,16 @@ Transform:
   m_Father: {fileID: 241679148}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2124290760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124290758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5330a5eb8156b604b96274c32e757a86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  device: 4
