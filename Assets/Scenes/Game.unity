@@ -170,7 +170,7 @@ MonoBehaviour:
   sphereSize: 0.1
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   interactables: []
   controller: 1
 --- !u!135 &170351945
@@ -264,7 +264,7 @@ MonoBehaviour:
   sphereSize: 0.1
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   interactables: []
   controller: 2
 --- !u!135 &289822481
@@ -771,16 +771,35 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1877895838}
-  - component: {fileID: 1877895837}
   - component: {fileID: 1877895836}
   - component: {fileID: 1877895839}
-  m_Layer: 0
+  - component: {fileID: 1877895835}
+  m_Layer: 8
   m_Name: Button
   m_TagString: Pointable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &1877895835
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877895834}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 77d3db6af459d434ba4658c769b21b68, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &1877895836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -792,20 +811,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5999999, y: 0.29999995, z: 0.6}
+  m_Size: {x: 1, y: 0.6, z: 1}
   m_Center: {x: 0, y: -0.55, z: 0}
---- !u!114 &1877895837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1877895834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3470426e698c8bc46886113a83593126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1877895838
 Transform:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ public class Control : MonoBehaviour{
     public float sphereSize = 0.1f; //default
     public LayerMask interactableLayer;
     public Collider[] interactables;
-    [SerializeField] OVRInput.Controller controller;
+    public OVRInput.Controller controller;
     void Start(){
         //Void Setup Here!!!
     }
