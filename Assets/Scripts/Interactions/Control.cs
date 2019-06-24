@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class Control : MonoBehaviour{
-    public float sphereSize = 0.1f; //default
-    public LayerMask interactableLayer;
-    public Collider[] interactables;
+
+public class Control : MonoBehaviour
+{
     public OVRInput.Controller controller;
-    void Start(){
-        //Void Setup Here!!!
-    }
-    void Update(){
+    [SerializeField] float collisionSize = .1f;
+    [SerializeField] LayerMask interactable;
+    public Collider[] touching;
+
+    void Update()
+    {
         transform.localPosition = OVRInput.GetLocalControllerPosition(controller);
         transform.localRotation = OVRInput.GetLocalControllerRotation(controller);
-        interactables = Physics.OverlapSphere(transform.position, sphereSize, interactableLayer);
+        touching = Physics.OverlapSphere(transform.position, collisionSize, interactable);
     }
 }
