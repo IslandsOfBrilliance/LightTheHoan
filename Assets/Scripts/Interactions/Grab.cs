@@ -5,8 +5,9 @@ using UnityEngine;
 public class Grab : MonoBehaviour
 {
     Control control;
-    bool holding = false;
+    public bool holding = false;
     Collider held;
+    bool lastFrameTrigger;
     bool trigger;
     Rigidbody body;
     [SerializeField] float throwStrength;
@@ -20,6 +21,11 @@ public class Grab : MonoBehaviour
 
     void Update()
     {
+        lastFrameTrigger = trigger;
+        OVRInput.Update();
+        trigger = control.controller == OVRInput.Controller.LTouch
+                ? OVRInput.Get(OVRInput.Button.PrimaryHandTrigger)
+                : OVRInput.Get(OVRInput.Button.SecondaryHandTrigger);
         if (holding)
         {
             lastRotation = currentRotation;
@@ -27,11 +33,7 @@ public class Grab : MonoBehaviour
         }
         if (control.touching.Length > 0 && control.touching[0].tag == "Grabbable")
         {
-            OVRInput.Update();
-            bool trigger = control.controller == OVRInput.Controller.LTouch
-                    ? OVRInput.Get(OVRInput.Button.PrimaryHandTrigger)
-                    : OVRInput.Get(OVRInput.Button.SecondaryHandTrigger);
-            if (!holding && trigger) // pick up
+            if (!holding && !lastFrameTrigger && trigger) // pick up
             {
                 holding = true;
                 held = control.touching[0];
