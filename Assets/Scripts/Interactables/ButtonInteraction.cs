@@ -6,6 +6,7 @@ public class ButtonInteraction : Interaction
     public SpawnBulb bulby;
     public Animator animator;
     private bool isPressed;
+
     public override void Interact()
     {
         if (isPressed == false)
