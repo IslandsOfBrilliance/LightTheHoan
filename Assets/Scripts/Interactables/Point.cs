@@ -21,6 +21,7 @@ public class Point : MonoBehaviour
                 if (interaction != null)
                 {
                     interaction.Interact();
+                    print("print{PRINT_VOID([SERIAL_MONITOR]:POINTABLE_FOUND)}"); //Pointable Object {boolean "FOUND"(1)} Through Raycasting
                 }
             }
         }
