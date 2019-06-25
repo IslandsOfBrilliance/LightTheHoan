@@ -10,6 +10,8 @@ public class Grab : MonoBehaviour
     bool trigger;
     Rigidbody body;
     [SerializeField] float throwStrength;
+    [SerializeField] float rotationStrength = .75f;
+    Quaternion lastRotation, currentRotation;
 
     private void Start()
     {
@@ -18,6 +20,11 @@ public class Grab : MonoBehaviour
 
     void Update()
     {
+        if (holding)
+        {
+            lastRotation = currentRotation;
+            currentRotation = held.transform.rotation;
+        }
         if (control.touching.Length > 0 && control.touching[0].tag == "Grabbable")
         {
             OVRInput.Update();
@@ -40,8 +47,15 @@ public class Grab : MonoBehaviour
                 body.useGravity = true;
                 body.isKinematic = false;
                 body.velocity = OVRInput.GetLocalControllerVelocity(control.controller) * throwStrength;
+                body.angularVelocity = GetAngularVelocity();
                 body = null;
             }
         }
+    }
+
+    Vector3 GetAngularVelocity()
+    {
+        Quaternion deltaRotation = currentRotation * Quaternion.Inverse(lastRotation);
+        return new Vector3(Mathf.DeltaAngle(0, deltaRotation.eulerAngles.x), Mathf.DeltaAngle(0, deltaRotation.eulerAngles.y), Mathf.DeltaAngle(0, deltaRotation.eulerAngles.z)) * rotationStrength;
     }
 }
