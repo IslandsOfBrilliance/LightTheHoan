@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 public class ButtonInteraction : Interaction{
-    private Animator animator;
+    public Animator animator;
     private bool isPressed;
-    private void Start(){
-        animator = GetComponent<Animator>();
-    }
     public override void Interact(){
         if (isPressed == false)
         {
