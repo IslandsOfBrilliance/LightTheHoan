@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 83bf206b908565a43a2b28fe18364d66, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,8 +155,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightColor: 5
-  displayEffectOnInteractable: 0
-  interactableMeshRenderers: []
+  displayEffectOnInteractable: 1
+  interactableMeshRenderers:
+  - {fileID: 454577387401691211}
 --- !u!114 &430583100939167500
 MonoBehaviour:
   m_ObjectHideFlags: 0
