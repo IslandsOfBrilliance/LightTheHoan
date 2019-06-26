@@ -87,7 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 454577388220192305}
   - component: {fileID: 454577388220192304}
-  - component: {fileID: 454577388220192307}
+  - component: {fileID: 687269712292171142}
   m_Layer: 8
   m_Name: Bulb
   m_TagString: Grabbable
@@ -126,8 +126,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &454577388220192307
-SphereCollider:
+--- !u!65 &687269712292171142
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -137,5 +137,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.175
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
