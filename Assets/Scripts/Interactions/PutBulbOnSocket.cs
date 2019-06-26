@@ -7,7 +7,14 @@ public class PutBulbOnSocket : MonoBehaviour
     [SerializeField] Transform bulbPosition;
     [SerializeField] Grab Left;
     [SerializeField] Grab Right;
-    private void OnTriggerEnter(Collider bulb)
+    LightEffect off;
+
+    private void Start()
+    {
+        off = GetComponent<LightEffect>();
+    }
+
+    void OnTriggerEnter(Collider bulb)
     {
         if (bulb.tag == "Grabbable")
         {
@@ -15,10 +22,20 @@ public class PutBulbOnSocket : MonoBehaviour
             Right.holding = false;
             bulb.transform.position = bulbPosition.position;
             bulb.transform.parent = bulbPosition;
-            bulb.transform.rotation = Quaternion.identity;
+            bulb.transform.rotation = Quaternion.identity; // resets rotation
             Rigidbody body = bulb.GetComponent<Rigidbody>();
             body.useGravity = false;
             body.isKinematic = true;
+
+            LightManager.Instance.ChangeLightEffect(bulb.GetComponent<LightEffect>());
+        }
+    }
+
+    void OnTriggerExit(Collider bulb)
+    {
+        if (bulb.tag == "Grabbable")
+        {
+            LightManager.Instance.ChangeLightEffect(off);
         }
     }
 }

@@ -12,7 +12,8 @@ public enum ColorPalette
     Cyan,
     Purple,
     Pink,
-    White
+    White,
+    Off
 }
 
 public class ColorManager : MonoBehaviour
