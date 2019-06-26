@@ -8,7 +8,7 @@ public class SpawnBulb : MonoBehaviour
     public GameObject lightbulb;
 
     private bool infiniteSpawn;
-
+    
     public void BulbSpawn()
     {
         if(bulb == null || infiniteSpawn)
