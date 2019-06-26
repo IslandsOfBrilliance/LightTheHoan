@@ -15,18 +15,18 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.89098537, g: 0.8983039, b: 0.9531932, a: 0.78195035}
+  m_FogColor: {r: 0.3271163, g: 0.3271163, b: 0.3271163, a: 0.77988875}
   m_FogMode: 2
   m_FogDensity: 0.00005
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.28424293, g: 0.39680287, b: 0.41104582, a: 0.750625}
+  m_AmbientSkyColor: {r: 0.2237157, g: 0.25020835, b: 0.32968628, a: 0.750625}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2869c66e822baa941bb52b0e6ec3dfdf, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -261,7 +261,7 @@ PrefabInstance:
     - target: {fileID: 3921957562159215992, guid: e57dea15462a8754d880f52126e6d4cb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3921957562159215992, guid: e57dea15462a8754d880f52126e6d4cb,
         type: 3}
@@ -302,6 +302,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3921957562752156160, guid: e57dea15462a8754d880f52126e6d4cb,
+        type: 3}
+      propertyPath: m_Name
+      value: Socket
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e57dea15462a8754d880f52126e6d4cb, type: 3}
@@ -389,7 +394,7 @@ PrefabInstance:
     - target: {fileID: 8320353665416891740, guid: 04d15fbdb3edd9741833dfed4203c25c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8320353665416891740, guid: 04d15fbdb3edd9741833dfed4203c25c,
         type: 3}
@@ -2165,39 +2170,43 @@ MonoBehaviour:
   - color: 0
     lightColor: {r: 1, g: 0, b: 0, a: 1}
     emissiveColor: {r: 1, g: 0, b: 0, a: 1}
-    brightness: 1
+    brightness: 3
   - color: 1
     lightColor: {r: 1, g: 0.52006483, b: 0, a: 1}
     emissiveColor: {r: 1, g: 0.52156866, b: 0, a: 1}
-    brightness: 1
+    brightness: 3
   - color: 2
     lightColor: {r: 1, g: 0.9815198, b: 0, a: 1}
     emissiveColor: {r: 1, g: 0.9843137, b: 0, a: 1}
-    brightness: 1
+    brightness: 3
   - color: 3
     lightColor: {r: 0, g: 1, b: 0.035513878, a: 1}
     emissiveColor: {r: 0, g: 1, b: 0.039215688, a: 1}
-    brightness: 1
+    brightness: 3
   - color: 5
     lightColor: {r: 0, g: 1, b: 0.8253398, a: 1}
     emissiveColor: {r: 0, g: 1, b: 0.8235295, a: 1}
-    brightness: 1
+    brightness: 3
   - color: 4
     lightColor: {r: 0, g: 0.46274513, b: 1, a: 1}
     emissiveColor: {r: 0, g: 0.46274513, b: 1, a: 1}
-    brightness: 1
+    brightness: 3
   - color: 6
     lightColor: {r: 0.5680933, g: 0, b: 1, a: 1}
     emissiveColor: {r: 0.5686275, g: 0, b: 1, a: 1}
-    brightness: 0
+    brightness: 3
   - color: 7
     lightColor: {r: 1, g: 0, b: 0.746696, a: 1}
     emissiveColor: {r: 1, g: 0, b: 0.74509805, a: 1}
-    brightness: 0
+    brightness: 3
   - color: 8
     lightColor: {r: 1, g: 1, b: 1, a: 1}
     emissiveColor: {r: 1, g: 1, b: 1, a: 1}
-    brightness: 1
+    brightness: 3
+  - color: 9
+    lightColor: {r: 0, g: 0, b: 0, a: 1}
+    emissiveColor: {r: 0, g: 0, b: 0, a: 1}
+    brightness: 0
 --- !u!114 &641234659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2331,7 +2340,56 @@ MonoBehaviour:
   - {fileID: 641234540}
   - {fileID: 641234539}
   - {fileID: 641234538}
-  currentEffect: {fileID: 0}
+  currentEffect: {fileID: 641234661}
+--- !u!114 &641234661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641234537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ced02ad08065ca498379472cdb6f796, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightColor: 9
+  displayEffectOnInteractable: 0
+  interactableMeshRenderers: []
+--- !u!84 &739075636
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 3
+  m_Width: 2048
+  m_Height: 2048
+  m_AntiAliasing: 1
+  m_DepthFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_Dimension: 2
+  m_VolumeDepth: 1
 --- !u!114 &826230324 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6364691183346241760, guid: ac25f8b9be0249841a252456f856db5f,
@@ -2421,7 +2479,7 @@ PrefabInstance:
     - target: {fileID: 6364691183283265958, guid: ac25f8b9be0249841a252456f856db5f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6364691183283265958, guid: ac25f8b9be0249841a252456f856db5f,
         type: 3}
@@ -2527,7 +2585,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.4056604, g: 0.3908308, b: 0.34634212, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -2641,7 +2699,7 @@ PrefabInstance:
     - target: {fileID: 809831336205300342, guid: 73ab4860cd20e4240a076e7adc059bb2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 809831336205300342, guid: 73ab4860cd20e4240a076e7adc059bb2,
         type: 3}
@@ -2672,6 +2730,81 @@ PrefabInstance:
         type: 3}
       propertyPath: cloudShadowMap
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: cloudsRenderTarget
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: GameTime.Hours
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: internalHour
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: currentHour
+      value: 24.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: currentTimeInHours
+      value: 17689920.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: LST
+      value: 595.5578
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: lastHourUpdate
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: GameTime.solarTime
+      value: 0.3277161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: GameTime.lunarTime
+      value: 0.38754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: currentWeatherFogMod.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: currentWeatherFogMod.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: currentWeatherFogMod.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: currentWeatherFogMod.a
+      value: 0.6728837
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: isNight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6090455910212606041, guid: 73ab4860cd20e4240a076e7adc059bb2,
+        type: 3}
+      propertyPath: Weather.currentTemperature
+      value: 19.177067
       objectReference: {fileID: 0}
     - target: {fileID: 6090455909706870049, guid: 73ab4860cd20e4240a076e7adc059bb2,
         type: 3}
@@ -2756,7 +2889,7 @@ PrefabInstance:
     - target: {fileID: 4776136129367638656, guid: b0d76b36ee072fe44a5a98f29bd08f37,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4776136129367638656, guid: b0d76b36ee072fe44a5a98f29bd08f37,
         type: 3}
@@ -3126,34 +3259,28 @@ RenderTexture:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  serializedVersion: 3
-  m_Width: 512
-  m_Height: 512
-  m_AntiAliasing: 1
-  m_DepthFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 0
-    m_WrapV: 0
-    m_WrapW: 0
-  m_Dimension: 2
-  m_VolumeDepth: 1
+  m_Name: Enviro/Standard/EnviroFogRendering
+  m_Shader: {fileID: 4800000, guid: 78aa7501e8e951446b1be533c73e8de6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _EnviroVolumeLightingTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Source:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1001 &1257257917234751068
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3204,7 +3331,7 @@ PrefabInstance:
     - target: {fileID: 6549387870868015416, guid: c1ac96827013b06448f5becc359efa30,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6549387870868015416, guid: c1ac96827013b06448f5becc359efa30,
         type: 3}
@@ -3305,7 +3432,7 @@ PrefabInstance:
     - target: {fileID: 9092890118621786712, guid: 00629911e0d885e4bb7867aedd44dc8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9092890118621786712, guid: 00629911e0d885e4bb7867aedd44dc8c,
         type: 3}
@@ -3379,7 +3506,7 @@ PrefabInstance:
     - target: {fileID: 5512976982141804342, guid: 2c45129cc27833249b0ee5a4c035b100,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5512976982141804342, guid: 2c45129cc27833249b0ee5a4c035b100,
         type: 3}
