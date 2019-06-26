@@ -9,6 +9,7 @@ TagManager:
   - Waypoint
   - Pointable
   - Grabbable
+  - ground
   layers:
   - Default
   - TransparentFX
