@@ -10,9 +10,9 @@ public class BlinkEffect : LightEffect
     {
         for (; ; )
         {
-            SetLightColor(lights, lightColor);
+           // SetLightColor(lights, lightColor);
             yield return new WaitForSeconds(blinkRate);
-            SetLightColor(lights, ColorPalette.Black);
+           // SetLightColor(lights, ColorPalette.Black);
             yield return new WaitForSeconds(blinkRate);
         }
     }

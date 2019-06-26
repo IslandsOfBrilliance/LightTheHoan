@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LightEffect : MonoBehaviour
 {
-    [SerializeField] protected ColorPalette lightColor;
+    public ColorPalette lightColor;
     protected Coroutine runningEffect;
 
     public bool displayEffectOnInteractable;
@@ -30,17 +30,14 @@ public class LightEffect : MonoBehaviour
 
     public virtual IEnumerator ActivateEffect(List<MeshRenderer> lights)
     {
-        SetLightColor(lights, lightColor);
-        yield break;
-    }
-
-    public virtual void SetLightColor(List<MeshRenderer> lights, ColorPalette color)
-    {
-        LightColor _lightColor = ColorManager.GetLightColor(color);
+        LightColor _lightColor = ColorManager.GetLightColor(lightColor);
         foreach (MeshRenderer rend in lights)
         {
             rend.material.color = _lightColor.lightColor;
             rend.material.SetColor("_EmissionColor", _lightColor.emissiveColor * _lightColor.brightness);
         }
+        yield break;
     }
+
+
 }
