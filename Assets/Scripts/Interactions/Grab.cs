@@ -35,6 +35,7 @@ public class Grab : MonoBehaviour
         {
             if (!holding && !lastFrameTrigger && trigger) // pick up
             {
+                print(trigger);
                 holding = true;
                 held = control.touching[0];
                 held.transform.position = transform.position;

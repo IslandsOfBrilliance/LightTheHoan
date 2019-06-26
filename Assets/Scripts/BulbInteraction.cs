@@ -8,7 +8,7 @@ public class BulbInteraction : MonoBehaviour
     {
         if (other.tag == "ground")
         {
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject, 0.3f);
         }
     }
 

@@ -6,11 +6,11 @@ using UnityEngine.XR;
 public class HandAnimation : MonoBehaviour
 {
     public XRNode NodeType;
-    Animator animator;
+    public Animator animator;
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
+        print(animator.name);
     }
 
     private void Update()

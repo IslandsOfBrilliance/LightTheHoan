@@ -7,11 +7,11 @@ public class SpawnBulb : MonoBehaviour
     public Transform spawnPosition;
     public GameObject lightbulb;
 
-    private bool infiniteSpawn;
+    private bool doInfiniteSpawn;
     
     public void BulbSpawn(ColorPalette color)
     {
-        if(bulb == null || infiniteSpawn)
+        if(bulb == null || doInfiniteSpawn)
         {
             bulb = Instantiate(lightbulb, spawnPosition.position, Quaternion.identity);
             bulb.GetComponent<LightEffect>().lightColor = color;
@@ -22,7 +22,7 @@ public class SpawnBulb : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F4))
         {
-            infiniteSpawn = !infiniteSpawn;
+            doInfiniteSpawn = !doInfiniteSpawn;
         }
     }
 }
