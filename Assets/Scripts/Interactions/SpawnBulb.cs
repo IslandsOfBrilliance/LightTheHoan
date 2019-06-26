@@ -9,11 +9,12 @@ public class SpawnBulb : MonoBehaviour
 
     private bool infiniteSpawn;
     
-    public void BulbSpawn()
+    public void BulbSpawn(ColorPalette color)
     {
         if(bulb == null || infiniteSpawn)
         {
             bulb = Instantiate(lightbulb, spawnPosition.position, Quaternion.identity);
+            bulb.GetComponent<LightEffect>().lightColor = color;
         }
     }
 

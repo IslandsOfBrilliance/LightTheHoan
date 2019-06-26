@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 687269712292171142}
   - component: {fileID: 237528592558663883}
   - component: {fileID: 430583100939167500}
+  - component: {fileID: -5358735264613730314}
   m_Layer: 8
   m_Name: Bulb
   m_TagString: Grabbable
@@ -168,3 +169,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99dcbbe3f5f1fb5448e9d58e6a8539b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &-5358735264613730314
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454577388220192306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}

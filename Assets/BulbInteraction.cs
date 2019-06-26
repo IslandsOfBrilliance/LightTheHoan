@@ -11,4 +11,5 @@ public class BulbInteraction : MonoBehaviour
             Destroy(gameObject, 0.2f);
         }
     }
+
 }

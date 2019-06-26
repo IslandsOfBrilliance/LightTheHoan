@@ -6,14 +6,21 @@ public class ButtonInteraction : Interaction
     public SpawnBulb bulby;
     public Animator animator;
     private bool isPressed;
+    public ColorPalette buttonColor;
+    public MeshRenderer meshrenderer;
 
+    private void Start()
+    {
+        ActivateEffect();
+    }
     public override void Interact()
     {
         if (isPressed == false)
         {
+
             isPressed = true;
             animator.SetTrigger("ButtonTrig");
-            bulby.BulbSpawn();
+            bulby.BulbSpawn(buttonColor);
             StartCoroutine(Pressed());
         }
     }
@@ -21,5 +28,11 @@ public class ButtonInteraction : Interaction
     {
         yield return new WaitForSeconds(1);
         isPressed = false;
+    }
+    public void ActivateEffect()
+    {
+        LightColor _lightColor = ColorManager.GetLightColor(buttonColor);
+        meshrenderer.material.color = _lightColor.lightColor;
+        meshrenderer.material.SetColor("_EmissionColor", _lightColor.emissiveColor * _lightColor.brightness);
     }
 }
