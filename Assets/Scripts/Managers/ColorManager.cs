@@ -5,9 +5,14 @@ using UnityEngine;
 public enum ColorPalette
 {
     Red,
+    Orange,
+    Yellow,
     Green,
     Blue,
-    Black
+    Cyan,
+    Purple,
+    Pink,
+    White
 }
 
 public class ColorManager : MonoBehaviour
