@@ -16,7 +16,8 @@ public class PutBulbOnSocket : MonoBehaviour
 
     void OnTriggerEnter(Collider bulb)
     {
-        if (bulb.tag == "Grabbable")
+        LightEffect lightEffect = bulb.GetComponent<LightEffect>();
+        if (bulb.tag == "Grabbable" && lightEffect)
         {
             Left.holding = false;
             Right.holding = false;
@@ -27,7 +28,7 @@ public class PutBulbOnSocket : MonoBehaviour
             body.useGravity = false;
             body.isKinematic = true;
 
-            LightManager.Instance.ChangeLightEffect(bulb.GetComponent<LightEffect>());
+            LightManager.Instance.ChangeLightEffect(lightEffect);
         }
     }
 
