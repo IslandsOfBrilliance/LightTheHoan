@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 public class SpawnBulb : MonoBehaviour
 {
-    private GameObject bulb;
+    public GameObject[] lightbulbs;
     public Transform spawnPosition;
-    public GameObject lightbulb;
 
+    private GameObject bulb;
     private bool doInfiniteSpawn;
     
     public void BulbSpawn(ColorPalette color)
     {
         if(bulb == null || doInfiniteSpawn)
         {
-            bulb = Instantiate(lightbulb, spawnPosition.position, Quaternion.identity);
+            bulb = Instantiate(lightbulbs[Random.Range(0, lightbulbs.Length)], spawnPosition.position, Quaternion.identity);
             bulb.GetComponent<LightEffect>().lightColor = color;
         }
     }

@@ -8,11 +8,6 @@ public class HandAnimation : MonoBehaviour
     public XRNode NodeType;
     public Animator animator;
 
-    private void Start()
-    {
-        print(animator.name);
-    }
-
     private void Update()
     {
         OVRInput.Update();
