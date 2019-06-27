@@ -11,6 +11,8 @@ public class PutBulbOnSocket : MonoBehaviour
     [SerializeField] Grab Right;
     LightEffect off;
 
+    AudioSource source;
+
     private void Awake()
     {
         Instance = this;
@@ -18,6 +20,7 @@ public class PutBulbOnSocket : MonoBehaviour
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
         off = GetComponent<LightEffect>();
     }
 
@@ -26,6 +29,7 @@ public class PutBulbOnSocket : MonoBehaviour
         LightEffect lightEffect = bulb.GetComponent<LightEffect>();
         if (bulb.tag == "Grabbable" && lightEffect)
         {
+            source.Play();
             Left.holding = false;
             Right.holding = false;
             bulb.transform.position = bulbPosition.position;

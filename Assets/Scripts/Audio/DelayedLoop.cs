@@ -8,7 +8,7 @@ public class DelayedLoop : MonoBehaviour
     public AudioClip audioClip;
     [Range(0f, 30f)]
     public float minDelay;
-    [Range(0f, 30f)]
+    [Range(0f, 1000f)]
     public float maxDelay;
 
     AudioSource source;

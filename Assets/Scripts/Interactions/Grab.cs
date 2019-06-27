@@ -30,6 +30,7 @@ public class Grab : MonoBehaviour
         if (holding)
         {
             lastRotation = currentRotation;
+            if(held)
             currentRotation = held.transform.rotation;
         }
 

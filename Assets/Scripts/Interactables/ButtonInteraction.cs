@@ -9,14 +9,18 @@ public class ButtonInteraction : Interaction
     public ColorPalette buttonColor;
     public MeshRenderer meshrenderer;
 
+    AudioSource source;
+
     private void Start()
     {
+        source = GetComponent<AudioSource>();
         ActivateEffect();
     }
     public override void Interact()
     {
         if (isPressed == false)
         {
+            source.Play();
             isPressed = true;
             animator.SetTrigger("ButtonTrig");
             bulby.BulbSpawn(buttonColor);
