@@ -17,7 +17,6 @@ public class ButtonInteraction : Interaction
     {
         if (isPressed == false)
         {
-
             isPressed = true;
             animator.SetTrigger("ButtonTrig");
             bulby.BulbSpawn(buttonColor);

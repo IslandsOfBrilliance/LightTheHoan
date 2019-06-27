@@ -26,16 +26,17 @@ public class Grab : MonoBehaviour
         trigger = control.controller == OVRInput.Controller.LTouch
                 ? OVRInput.Get(OVRInput.Button.PrimaryHandTrigger)
                 : OVRInput.Get(OVRInput.Button.SecondaryHandTrigger);
+
         if (holding)
         {
             lastRotation = currentRotation;
             currentRotation = held.transform.rotation;
         }
+
         if (control.touching.Length > 0 && control.touching[0].tag == "Grabbable")
         {
             if (!holding && !lastFrameTrigger && trigger) // pick up
             {
-                print(trigger);
                 holding = true;
                 held = control.touching[0];
                 held.transform.position = transform.position;

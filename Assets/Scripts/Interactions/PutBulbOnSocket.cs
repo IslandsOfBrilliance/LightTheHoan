@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class PutBulbOnSocket : MonoBehaviour
 {
+    public static PutBulbOnSocket Instance;
+
     [SerializeField] Transform bulbPosition;
     [SerializeField] Grab Left;
     [SerializeField] Grab Right;
     LightEffect off;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -36,7 +43,12 @@ public class PutBulbOnSocket : MonoBehaviour
     {
         if (bulb.tag == "Grabbable")
         {
-            LightManager.Instance.ChangeLightEffect(off);
+            ResetLights();
         }
+    }
+
+    public void ResetLights()
+    {
+        LightManager.Instance.ChangeLightEffect(off);
     }
 }
