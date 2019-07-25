@@ -49,6 +49,8 @@ public class Grab : MonoBehaviour
             else if (holding && !trigger) // drop
             {
                 holding = false;
+
+                if(held)
                 held.transform.parent = null;
                 body.useGravity = true;
                 body.isKinematic = false;

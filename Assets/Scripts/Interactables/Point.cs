@@ -13,7 +13,8 @@ public class Point : MonoBehaviour
     private void Update()
     { /*private void update "UPDATES EVERY FRAME"*/
         OVRInput.Update();
-        if (pointControl.touching.Length > 0 && pointControl.touching[0].tag == "Pointable" && pointControl.controller == OVRInput.Controller.LTouch ? OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) : OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger)){
+        if (pointControl.touching.Length > 0 && pointControl.touching[0].tag == "Pointable")// && pointControl.controller == OVRInput.Controller.LTouch ? OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) : OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger)
+        {
 
             if(pointControl.touching.Length > 0 && pointControl.touching[0])
             {
