@@ -13,6 +13,12 @@ public class PutBulbOnSocket : MonoBehaviour
 
     AudioSource source;
 
+    [HideInInspector]
+    public GameObject socketedBulb;
+
+    [HideInInspector]
+    public GameObject oldBulb;
+
     private void Awake()
     {
         Instance = this;
@@ -27,8 +33,10 @@ public class PutBulbOnSocket : MonoBehaviour
     void OnTriggerEnter(Collider bulb)
     {
         LightEffect lightEffect = bulb.GetComponent<LightEffect>();
-        if (bulb.tag == "Grabbable" && lightEffect)
+        if (bulb.tag == "Grabbable" && lightEffect && bulb.gameObject != oldBulb && oldBulb == null)
         {
+            socketedBulb = bulb.gameObject;
+            SpawnBulb.Instance.bulb = null;
             source.Play();
             Left.holding = false;
             Right.holding = false;

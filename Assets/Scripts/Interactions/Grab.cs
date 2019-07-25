@@ -40,6 +40,9 @@ public class Grab : MonoBehaviour
             {
                 holding = true;
                 held = control.touching[0];
+
+                if (held.gameObject == PutBulbOnSocket.Instance.oldBulb) return;
+
                 held.transform.position = transform.position;
                 held.transform.parent = transform;
                 body = held.GetComponent<Rigidbody>();
