@@ -24,8 +24,8 @@ public class Grab : MonoBehaviour
         lastFrameTrigger = trigger;
         OVRInput.Update();
         trigger = control.controller == OVRInput.Controller.LTouch
-                ? OVRInput.Get(OVRInput.Button.PrimaryHandTrigger)
-                : OVRInput.Get(OVRInput.Button.SecondaryHandTrigger);
+                ? OVRInput.Get(OVRInput.Button.Any)
+                : OVRInput.Get(OVRInput.Button.Any);
 
         if (holding)
         {
